@@ -4,8 +4,11 @@ API criada para gerenciar pedidos de produtos ou serviços, proporcionando um co
 dos pedidos de uma pessoa ou organização.
 
 O projeto está disponibilizado para testes e análises no GitHub e a API está ativa no Heroku:
+
 GitHub: https://github.com/symonnsantos/quickly
+
 Heroku: https://dashboard.heroku.com/apps/quicklyappsenior
+
 
 
 ::: Passo a passo para clonar o projeto e subi-lo no IntelliJ :::
@@ -21,6 +24,7 @@ configurações para acesso à base de dados do Heroku. O segundo diz respeito �
 subindo a aplicação pela IDE. Os testes poderão ser realizados via Postman através da Collection disponibilizada também
 no projeto, no arquivo Quickly.postman_collection.json.
 Para utilizar determinado padrão de configuração, basta comentar (Usando #) as linhas do que não será utilizado.
+
 
 
 ::: Informações sobre a estrutura do projeto :::
@@ -40,8 +44,13 @@ a possibilidade de aplicar um desconto ao valor de cada item;
 ::: Tecnologias utilizadas no projeto :::
 
 • Java 1.8;
+
 • Spring Framework 2.7.0;
+
 • Spring Data JPA;
+
 • Spring Web;
+
 • Lombok;
+
 • Postgre SQL;
