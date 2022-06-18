@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "d610c1bf-424d-40ab-b245-12f25df04921",
+		"name": "Quickly",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14184357"
+	},
+	"item": [
+		{
+			"name": "Produto/serviço",
+			"item": [
+				{
+					"name": "Pesquisar Produto/serviço (Paginação)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://quicklyappsenior.herokuapp.com/produtoouservico?pageIndex=0&pageSize=15",
+							"protocol": "https",
+							"host": [
+								"quicklyappsenior",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"produtoouservico"
+							],
+							"query": [
+								{
+									"key": "pageIndex",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "15"
+								},
+								{
+									"key": "id",
+									"value": "63f01285-cacc-473c-9445-410c4c4ee6a3",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pesquisar Produto/serviço (By Id)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://quicklyappsenior.herokuapp.com/produtoouservico/7ab250bc-9402-4e46-b4d9-ac8f93518193",
+							"protocol": "https",
+							"host": [
+								"quicklyappsenior",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"produtoouservico",
+								"7ab250bc-9402-4e46-b4d9-ac8f93518193"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar produto/serviço",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"produto 001\",\r\n    \"definicaoProdutoServicoEnum\": \"SERVICO\",\r\n    \"ativo\": true,\r\n    \"valor\": 1650\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://quicklyappsenior.herokuapp.com/produtoouservico",
+							"protocol": "https",
+							"host": [
+								"quicklyappsenior",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"produtoouservico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar produto/serviço",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://quicklyappsenior.herokuapp.com/078b65d3-65a2-4233-b063-46c234cf6dea",
+							"protocol": "https",
+							"host": [
+								"quicklyappsenior",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"078b65d3-65a2-4233-b063-46c234cf6dea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar produto/serviço",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"50d6e9ff-4edf-4df9-8d13-889180045c2d\",\r\n    \"nome\": \"produto 0100\",\r\n    \"definicaoProdutoServicoEnum\": \"PRODUTO\",\r\n    \"ativo\": true,\r\n    \"valor\": 1620.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://quicklyappsenior.herokuapp.com/produtoouservico/8f7aa992-24da-4c4f-bfdd-627445d6d67e",
+							"protocol": "https",
+							"host": [
+								"quicklyappsenior",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"produtoouservico",
+								"8f7aa992-24da-4c4f-bfdd-627445d6d67e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Setar produto/serviço (Ativo)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"50d6e9ff-4edf-4df9-8d13-889180045c2d\",\r\n    \"ativo\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://quicklyappsenior.herokuapp.com/produtoouservico/ativo",
+							"protocol": "https",
+							"host": [
+								"quicklyappsenior",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"produtoouservico",
+								"ativo"
+							],
+							"query": [
+								{
+									"key": "ativo",
+									"value": "false",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedido",
+			"item": [
+				{
+					"name": "Pesquisar Pedido (Paginação)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://quicklyappsenior.herokuapp.com/pedido?pageIndex=0&pageSize=15",
+							"protocol": "https",
+							"host": [
+								"quicklyappsenior",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"pedido"
+							],
+							"query": [
+								{
+									"key": "pageIndex",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pesquisar Pedido (By ID)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://quicklyappsenior.herokuapp.com/pedido/d599956d-1824-4395-81a3-e1fe88c4ba64",
+							"protocol": "https",
+							"host": [
+								"quicklyappsenior",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"pedido",
+								"d599956d-1824-4395-81a3-e1fe88c4ba64"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Pedido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Pedido AB\",\r\n    \"definicaoStatusEnum\": \"ABERTO\",\r\n    \"itensPedido\": [\r\n        {\r\n            \"produtoOuServico\": {\r\n                \"id\": \"63f01285-cacc-473c-9445-410c4c4ee6a3\"\r\n            },\r\n            \"quantidade\": 4,\r\n            \"desconto\": 20\r\n        },\r\n        {\r\n        \"produtoOuServico\": {\r\n                \"id\": \"f261ee52-b808-4005-9792-63ee753b9d78\"\r\n            },\r\n            \"quantidade\": 1,\r\n            \"desconto\": 10\r\n        },\r\n        {\r\n        \"produtoOuServico\": {\r\n                \"id\": \"2f138852-d09e-4601-9951-c6658046d39b\"\r\n            },\r\n            \"quantidade\": 2,\r\n            \"desconto\": 15\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://quicklyappsenior.herokuapp.com/pedido",
+							"protocol": "https",
+							"host": [
+								"quicklyappsenior",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Pedido",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://quicklyappsenior.herokuapp.com/pedido/4b3aa1ea-7a56-4059-912c-02774e2d12d6",
+							"protocol": "https",
+							"host": [
+								"quicklyappsenior",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"pedido",
+								"4b3aa1ea-7a56-4059-912c-02774e2d12d6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Pedido",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"4b3aa1ea-7a56-4059-912c-02774e2d12d6\",\r\n    \"nome\": \"Pedido ASASASSA\",\r\n    \"definicaoStatusEnum\": \"ABERTO\",\r\n    \"itensPedido\": [\r\n        {\r\n            \"id\": \"17b1a0c4-9c25-425b-8913-1c19e10c1645\",\r\n            \"produtoOuServicos\": {\r\n                \"id\": \"63f01285-cacc-473c-9445-410c4c4ee6a3\",\r\n                \"nome\": \"produto 001\",\r\n                \"definicaoProdutoServicoEnum\": \"PRODUTO\",\r\n                \"ativo\": true,\r\n                \"valor\": 1000.00\r\n            },\r\n            \"quantidade\": 3,\r\n            \"valor\": 900.00,\r\n            \"desconto\": 10\r\n        },\r\n        {\r\n            \"id\": \"11b44bb7-1525-46c2-97ec-79f1e1b1051c\",\r\n            \"produtoOuServicos\": {\r\n                \"id\": \"74b82421-50a9-4e4e-a9e3-687a6a1ac831\",\r\n                \"nome\": \"produto 002\",\r\n                \"definicaoProdutoServicoEnum\": \"PRODUTO\",\r\n                \"ativo\": true,\r\n                \"valor\": 2000.00\r\n            },\r\n            \"quantidade\": 1,\r\n            \"valor\": 2000.00,\r\n            \"desconto\": null\r\n        },\r\n        {\r\n            \"id\": \"bcfeffae-da5f-4d20-905c-b686907a1424\",\r\n            \"produtoOuServicos\": {\r\n                \"id\": \"587d640c-5e7e-4ac2-964a-38c547c86cb6\",\r\n                \"nome\": \"produto 003\",\r\n                \"definicaoProdutoServicoEnum\": \"PRODUTO\",\r\n                \"ativo\": false,\r\n                \"valor\": 1500.00\r\n            },\r\n            \"quantidade\": 2,\r\n            \"valor\": 1350.00,\r\n            \"desconto\": 10\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://quicklyappsenior.herokuapp.com/pedido/4b3aa1ea-7a56-4059-912c-02774e2d12d6",
+							"protocol": "https",
+							"host": [
+								"quicklyappsenior",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"pedido",
+								"4b3aa1ea-7a56-4059-912c-02774e2d12d6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Setar Pedido (Aberto/Finalizado)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"39d6a75a-c497-4db8-a209-b8943374397e\",\r\n    \"definicaoStatusEnum\": \"FINALIZADO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://quicklyappsenior.herokuapp.com/pedido/status",
+							"protocol": "https",
+							"host": [
+								"quicklyappsenior",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"pedido",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
