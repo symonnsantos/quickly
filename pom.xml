@@ -14,7 +14,7 @@
 	<name>quickly</name>
 	<description>Quickly é uma API prática que possibilita o cadastro de produtos e serviços, com gerenciamento de pedidos.</description>
 	<properties>
-		<java.version>18</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

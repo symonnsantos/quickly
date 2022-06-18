@@ -42,12 +42,10 @@ public class ProdutoServicoService {
     public String atualizar(UUID id, ProdutoOuServico produtoOuServico) {
         AtomicReference<String> retorno = new AtomicReference<>("");
         Optional<ProdutoOuServico> associacao = produtoServicoRepository.findById(produtoOuServico.getId());
-        associacao.ifPresentOrElse(produto -> {
+        associacao.ifPresent(produto -> {
             BeanUtils.copyProperties(produtoOuServico, produto, "id");
             produtoServicoRepository.save(produto);
             retorno.set("Produto/serviço atualizado com sucesso");
-        }, () -> {
-            retorno.set("Não foi possível atualizar o pedido");
         });
         return retorno.get();
     }

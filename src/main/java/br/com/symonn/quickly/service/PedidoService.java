@@ -60,12 +60,10 @@ public class PedidoService {
         AtomicReference<String> retorno = new AtomicReference<>("");
         if(pedido.getDefinicaoStatusEnum().equals(DefinicaoStatusEnum.ABERTO)){
             Optional<Pedido> pedidoSalvo = pedidoRepository.findById(pedido.getId());
-            pedidoSalvo.ifPresentOrElse(demanda -> {
+            pedidoSalvo.ifPresent(demanda -> {
                 BeanUtils.copyProperties(pedido, demanda, "id");
                 pedidoRepository.save(demanda);
                 retorno.set("Pedido atualizado com sucesso");
-            }, () -> {
-                retorno.set("Não foi possível atualizar o pedido");
             });
         } else {
             retorno.set("Não é possível editar um pedido com status 'aberto'");
@@ -76,12 +74,10 @@ public class PedidoService {
     public String setStatus(UUID id, DefinicaoStatusEnum definicaoStatusEnum) {
         AtomicReference<String> retorno = new AtomicReference<>("");
         Optional<Pedido> pedidoSalvo = pedidoRepository.findById(id);
-        pedidoSalvo.ifPresentOrElse(demanda -> {
+        pedidoSalvo.ifPresent(demanda -> {
             demanda.setDefinicaoStatusEnum(definicaoStatusEnum);
             pedidoRepository.save(demanda);
             retorno.set("Status atualizado com sucesso.");
-        }, () -> {
-            retorno.set("Não foi possível atualizar a definição do status.");
         });
         return retorno.get();
     }
