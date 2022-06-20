@@ -5,6 +5,7 @@ import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.UUID;
 
@@ -29,4 +30,7 @@ public class Pedido {
     @OneToMany(cascade=CascadeType.ALL)
     @JoinColumn(name = "pedido_fk")
     private List<ItensPedido> itensPedido;
+
+    @Column(name = "valor_total", length = 10)
+    private BigDecimal valorTotal;
 }

@@ -28,7 +28,7 @@ public class ItensPedido {
     @Column(name = "quantidade")
     private Integer quantidade;
 
-    @Column(name = "valor")
+    @Column(name = "valor_unitario")
     private BigDecimal valor;
 
     @Column(name = "desconto")

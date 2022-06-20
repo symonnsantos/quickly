@@ -34,6 +34,7 @@ public class PedidoService {
 
     public String criarPedido(Pedido pedido, HttpServletResponse response) throws Exception {
         List<ItensPedido> itens = pedido.getItensPedido();
+        pedido.setValorTotal(BigDecimal.valueOf(0));
         for (ItensPedido item : itens) {
             if(produtoServicoRepository.findById(item.getProdutoOuServico().getId()).get().getAtivo().equals(false)){
                 return "Não é possível fechar pedido com o produto inativo. ID:".concat(item.getProdutoOuServico().getId().toString());
@@ -42,8 +43,10 @@ public class PedidoService {
                 if(Objects.nonNull(item.getDesconto()) && produtoOuServico.getDefinicaoProdutoServicoEnum().equals(PRODUTO) && pedido.getDefinicaoStatusEnum().equals(DefinicaoStatusEnum.ABERTO)){
                     BigDecimal desconto = produtoOuServico.getValor().multiply(new BigDecimal(item.getDesconto()).divide(BigDecimal.valueOf(100l)));
                     item.setValor(produtoOuServico.getValor().subtract(desconto));
+                    pedido.setValorTotal(pedido.getValorTotal().add(item.getValor().multiply(BigDecimal.valueOf(item.getQuantidade()))));
                 } else {
                     item.setValor(produtoOuServico.getValor());
+                    pedido.setValorTotal(pedido.getValorTotal().add(item.getValor().multiply(BigDecimal.valueOf(item.getQuantidade()))));
                 }
             });
         }
