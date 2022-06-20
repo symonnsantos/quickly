@@ -96,7 +96,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome\": \"produto 001\",\r\n    \"definicaoProdutoServicoEnum\": \"SERVICO\",\r\n    \"ativo\": true,\r\n    \"valor_unitario\": 1650\r\n}",
+							"raw": "{\r\n    \"nome\": \"produto 999\",\r\n    \"definicaoProdutoServicoEnum\": \"PRODUTO\",\r\n    \"ativo\": true,\r\n    \"valor\": 1600.00\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -104,13 +104,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://quicklyappsenior.herokuapp.com/produtoouservico",
-							"protocol": "https",
+							"raw": "http://localhost:8080/produtoouservico",
+							"protocol": "http",
 							"host": [
-								"quicklyappsenior",
-								"herokuapp",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"produtoouservico"
 							]
@@ -154,7 +153,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": \"50d6e9ff-4edf-4df9-8d13-889180045c2d\",\r\n    \"nome\": \"produto 0100\",\r\n    \"definicaoProdutoServicoEnum\": \"PRODUTO\",\r\n    \"ativo\": true,\r\n    \"valor_unitario\": 1620.00\r\n}",
+							"raw": "{\r\n    \"id\": \"de81675a-4e5e-4991-a9bf-3ae1ab965c77\",\r\n    \"nome\": \"produto 007\",\r\n    \"definicaoProdutoServicoEnum\": \"PRODUTO\",\r\n    \"ativo\": true,\r\n    \"valor\": 2400.00\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -277,7 +276,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome\": \"Pedido ABC\",\r\n    \"definicaoStatusEnum\": \"ABERTO\",\r\n    \"itensPedido\": [\r\n        {\r\n            \"produtoOuServico\": {\r\n                \"id\": \"63f01285-cacc-473c-9445-410c4c4ee6a3\"\r\n            },\r\n            \"quantidade\": 4,\r\n            \"desconto\": 20\r\n        },\r\n        {\r\n        \"produtoOuServico\": {\r\n                \"id\": \"74b82421-50a9-4e4e-a9e3-687a6a1ac831\"\r\n            },\r\n            \"quantidade\": 1,\r\n            \"desconto\": 10\r\n        },\r\n        {\r\n        \"produtoOuServico\": {\r\n                \"id\": \"f5295a97-35e6-4185-b17a-72035ea64507\"\r\n            },\r\n            \"quantidade\": 2,\r\n            \"desconto\": 15\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"nome\": \"Pedido ABC\",\r\n    \"definicaoStatusEnum\": \"ABERTO\",\r\n    \"itensPedido\": [\r\n        {\r\n            \"produtoOuServico\": {\r\n                \"id\": \"f349769e-f334-4def-9aa7-081f6ec418d7\"\r\n            },\r\n            \"quantidade\": 4,\r\n            \"desconto\": 20\r\n        },\r\n        {\r\n        \"produtoOuServico\": {\r\n                \"id\": \"0f43d4df-6149-4f3b-922f-c36d25789f42\"\r\n            },\r\n            \"quantidade\": 1,\r\n            \"desconto\": 10\r\n        },\r\n        {\r\n        \"produtoOuServico\": {\r\n                \"id\": \"6a24183a-b764-4ebf-8e74-d7b4cfea727f\"\r\n            },\r\n            \"quantidade\": 2,\r\n            \"desconto\": 15\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
